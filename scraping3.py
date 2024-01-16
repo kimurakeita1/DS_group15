@@ -2,8 +2,9 @@ import sqlite3
 d = []
 d_list =[]
 # SQLiteデータベースに接続
-conn = sqlite3.connect('scrap_data.db')  # データベース名をscrap_dataに変更
+conn = sqlite3.connect('scrap_data.db')
 cursor = conn.cursor()
+#17から31までのDateに対して、Date, Precipitations, Temperatures, Wind_speeds列の数値を取得するSQLクエリ
 for date_value in range(17,32):
     query = f"SELECT Date, Precipitations, Temperatures, Wind_speeds FROM sql_DS WHERE Date = {date_value}"
 

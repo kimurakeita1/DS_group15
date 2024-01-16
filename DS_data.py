@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS sql_DS3 (
 cursor_source1.execute('SELECT Precipitations, Temperatures, Wind_speeds FROM sql_DS2')
 data_to_insert_db1 = cursor_source1.fetchall()
 
-# local_dataからtime_of_sleepingのデータを抽出
+# local_dataからTimesのデータを抽出
 cursor_source2.execute('SELECT Times AS Times FROM sql_DS')
 data_to_insert_db2 = cursor_source2.fetchall()
 
